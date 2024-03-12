@@ -2,6 +2,7 @@
 import Boton from "../components/Boton.astro";
 import Linkedin from "./logos/Linkedin.astro";
 import Email from "./logos/Email.astro";
+import DominicanFlag from "./logos/DominicanFlag.astro";
 ---
 
 <section>
@@ -12,6 +13,9 @@ import Email from "./logos/Email.astro";
       class="imagen"
     />
     <h1>Welcome to <spam class="gradinat">Elizon</spam> Porfolio</h1>
+    <span class="flag">
+      <DominicanFlag />
+    </span>
   </div>
   <div class="descrition">
     <p>
@@ -23,11 +27,11 @@ import Email from "./logos/Email.astro";
     <div class="buttons">
       <Boton href="https://www.linkedin.com/in/elizon-rodriguez-91ab21236/">
         <Linkedin slot="logo" />
-        <spam slot="text">Linkedin</spam>
+        <span slot="text">Linkedin</span>
       </Boton>
       <Boton href="mailto:elizorodriguez16@gmail.com">
         <Email slot="logo" />
-        <spam slot="text">Contact</spam>
+        <span slot="text">Contact</span>
       </Boton>
     </div>
   </div>
@@ -41,7 +45,6 @@ import Email from "./logos/Email.astro";
     border-radius: 20px;
     object-fit: cover;
   }
-
   .header {
     display: flex;
     flex-direction: row;
@@ -61,6 +64,9 @@ import Email from "./logos/Email.astro";
     gap: 20px;
     margin-top: 20px;
   }
+  .flag {
+    margin-left: 10px;
+  }
   /* Etiquetas */
   h1 {
     margin-left: 40px;
@@ -76,7 +82,12 @@ import Email from "./logos/Email.astro";
   }
   section {
     margin: auto;
-    padding: 20px;
+    
+    padding: 20px 0;
     border-bottom: 1px solid #e0e0e0;
+  }
+  span {
+    font-weight: 700;
+    margin: 5px;
   }
 </style>

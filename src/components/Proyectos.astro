@@ -15,12 +15,14 @@ import Link from "./logos/Link.astro";
     <div class="info">
       <h2>Proyecto Egresado UASD</h2>
       <span>Ionic</span>
+      <span>Angular</span>
+      <span>CSS</span>
       <p>
         Proyecto de la Universidad Autónoma de Santo Domingo, para la gestión de
         egresados.
       </p>
       <a href="https://egresados.uasd.edu.do" target="_blank">
-        <Link/>
+        <p><Link/></p>
         Ver Proyecto
     </a>
     </div>
@@ -52,6 +54,7 @@ import Link from "./logos/Link.astro";
   }
   img:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   h2 {
     margin-top: 0;
@@ -69,7 +72,39 @@ import Link from "./logos/Link.astro";
     color: #fff;
     padding: 0 25px;
     border-radius: 20px;
-    
     border: 1px solid #fff;
+  }
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border: solid 1px #fff;
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+  }
+  a:hover{
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.1);
+  }
+  p{
+    margin-right: 5px;
+  }
+  @media (max-width: 800px) {
+    .card {
+      flex-direction: column;
+      align-items: center;
+    }
+    img {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 1rem;
+    }
   }
 </style>

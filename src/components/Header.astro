@@ -7,15 +7,24 @@
   </nav>
 </header>
 <style>
-    header {
-      background-color: transparent;
-    }
 
+    header {
+      position: sticky;
+      margin: auto;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 800px;
+      border-radius: 20px;
+      background-color: rgba(116, 168, 168, 0.5);
+    }
+    
     nav ul {
       display: flex;
       justify-content: center;
       align-items: center;
       list-style: none;
+      
     }
 
     nav ul li {
@@ -34,9 +43,6 @@
     nav ul li:hover {
       border-radius: 5px;
       color: #fff;
-      background: black;
-    }
-    nav ul li a:hover {
       background: linear-gradient(90deg, #ff7e5f, #feb47b);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
