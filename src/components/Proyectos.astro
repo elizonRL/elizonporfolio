@@ -21,7 +21,7 @@ import Link from "./logos/Link.astro";
         Proyecto de la Universidad Autónoma de Santo Domingo, para la gestión de
         egresados.
       </p>
-      <a href="https://egresados.uasd.edu.do" target="_blank">
+      <a href="https://egresados.uasd.edu.do" target="_blank" class="disabled">
         <p><Link/></p>
         Ver Proyecto
     </a>
@@ -95,6 +95,9 @@ import Link from "./logos/Link.astro";
   }
   p{
     margin-right: 5px;
+  }
+  .disabled{
+    pointer-events: none;
   }
   @media (max-width: 800px) {
     .card {
