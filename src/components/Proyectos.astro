@@ -1,0 +1,71 @@
+---
+import Dev from "./logos/Dev.astro";
+---
+
+<section>
+  <div class="title">
+    <Dev />
+    <h1>Proyectos</h1>
+  </div>
+  <div class="card">
+    <div>
+      <img src="/img/egresados.jpg" alt="Proyecto Egresado uasd" />
+    </div>
+    <div class="info">
+      <h2>Proyecto Egresado UASD</h2>
+      <span>Ionic</span>
+      <p>
+        Proyecto de la Universidad Autónoma de Santo Domingo, para la gestión de
+        egresados.
+      </p>
+      <a href="https://egresados.uasd.edu.do" target="_blank">Ver Proyecto</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  .info {
+    margin-left: 30px;
+  }
+  img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  img:hover {
+    transform: scale(1.1);
+  }
+  h2 {
+    margin-top: 0;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    margin-left: 2rem;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  span {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 0 25px;
+    border-radius: 20px;
+    
+    border: 1px solid #fff;
+  }
+</style>
