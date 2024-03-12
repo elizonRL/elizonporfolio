@@ -2,13 +2,12 @@
 const { href } = Astro.props;
 ---
 
-  <a href=`${href}` target="_blank">
-    <slot name="logo" />
-    <slot name="text" />
-  </a>
+<a href=`${href}` target="_blank">
+  <slot name="logo" />
+  <slot name="text" />
+</a>
 
 <style>
- 
   a {
     width: 120px;
     height: 40px;
@@ -19,7 +18,9 @@ const { href } = Astro.props;
     color: inherit;
     border: 1px solid #e0e0e0;
     border-radius: 30px;
-    transition: background-color 0.2s, color 0.2s ;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
     transition: all 0.3s;
   }
   a:hover {
