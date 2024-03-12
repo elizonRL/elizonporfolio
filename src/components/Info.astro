@@ -1,0 +1,59 @@
+---
+import Boton from '../components/Boton.astro'
+import Linkedin from './logos/Linkedin.astro'
+---
+
+<section>
+  <div class="header">
+    <img
+      src="/img/perfilElizon.jpg"
+      alt="Imagen de perfil de Elizon"
+      class="imagen"
+    />
+    <h1>Welcome to <spam class="gradinat">Elizon</spam> Porfolio</h1>
+  </div>
+  <div>
+    <p>
+      +2 years of experience in <spam class="gradinat"
+        >full stack development</spam
+      >, graduate in computer science from the Autonomous University of Santo
+      Domingo (UASD). I love programming and technology in general.
+    </p>
+    <Boton href="https://www.linkedin.com/in/elizon-rodriguez-91ab21236/">
+      <Linkedin  slot='logo'/>
+
+    </Boton>
+  </div>
+</section>
+<style>
+  .imagen {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .gradinat {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h1 {
+    margin-left: 40px;
+    font-weight: 700;
+    font-size: 35px;
+  }
+  p {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    text-wrap: wrap;
+    font-weight: 700;
+  }
+</style>
