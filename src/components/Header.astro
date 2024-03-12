@@ -1,0 +1,44 @@
+<header>
+  <nav>
+    <ul>
+      <li><a href="#">Poryectos</a></li>
+      <li><a href="#">Sobre Mí</a></li>
+    </ul>
+  </nav>
+</header>
+<style>
+    header {
+      background-color: transparent;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+    }
+
+    nav ul li {
+      flex-direction: column;
+      margin-right: 10px;
+      padding: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
+    }
+    nav ul li:hover {
+      border-radius: 5px;
+      color: #fff;
+      background: black;
+    }
+    nav ul li a:hover {
+      background: linear-gradient(90deg, #ff7e5f, #feb47b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
