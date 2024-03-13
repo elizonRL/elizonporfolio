@@ -5,12 +5,13 @@ import Angular from "./logos/Angular.astro";
 import Githup from "./logos/Githup.astro";
 import Css from "./logos/Css.astro";
 import Ionic from "./logos/Ionic.astro";
+import Boton from "./Boton.astro";
 ---
 
 <section>
   <div class="title">
     <Dev />
-    <h1>Proyectos</h1>
+    <h1>project</h1>
   </div>
   <div class="card">
     <div>
@@ -21,7 +22,8 @@ import Ionic from "./logos/Ionic.astro";
       <div class="bages">
         <span>
           <Ionic />
-          Ionic</span>
+          Ionic</span
+        >
         <span>
           <Angular />
           Angular</span
@@ -32,8 +34,10 @@ import Ionic from "./logos/Ionic.astro";
         </span>
       </div>
       <p>
-        Proyecto de la Universidad Autónoma de Santo Domingo, para la gestión de
-        egresados.
+        This is a project developed as part of the university degree.
+        Collaborated on the <small class="degradado">front end</small> on the design and login logic,
+        authentication token logic, password recovery logic and the design of
+        your views, tweaks to some other views.
       </p>
       <div class="btn">
         <a
@@ -41,13 +45,17 @@ import Ionic from "./logos/Ionic.astro";
           target="_blank"
           class="disabled"
         >
-          <p><Link /></p>
+          <Link />
           Ver Proyecto
         </a>
-        <a href="" target="_blank">
-          <p><Githup /></p>
-          Ver Proyecto
-        </a>
+
+        <Boton
+          href="https://github.com/ericmguzmanc/egresados-uasd"
+          target="_blank"
+        >
+          <Githup slot="logo" />
+          <p slot="text">Githup</p>
+        </Boton>
       </div>
     </div>
   </div>
@@ -67,7 +75,7 @@ import Ionic from "./logos/Ionic.astro";
     margin-top: 2rem;
   }
   .info {
-    margin-left: 30px;
+    margin-left: 10px;
   }
   .btn {
     display: flex;
@@ -100,10 +108,12 @@ import Ionic from "./logos/Ionic.astro";
     margin-bottom: 1rem;
   }
   h1 {
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     background: linear-gradient(90deg, #ff7e5f, #feb47b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-weight: 500;
   }
   span {
     display: flex;
@@ -112,15 +122,24 @@ import Ionic from "./logos/Ionic.astro";
     justify-content: center;
     align-items: center;
     color: #fff;
-    padding: 0 25px;
-    border-radius: 20px;
+    padding: 4px 8px;
+    border-radius: 30px;
     border: 1px solid #fff;
+    font-size: .75rem;
+  }
+  .degradado {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
   }
   a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
+
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
@@ -136,7 +155,8 @@ import Ionic from "./logos/Ionic.astro";
     transform: scale(1.1);
   }
   p {
-    margin-right: 5px;
+    margin-inline: 5px;
+    text-wrap: wrap;
   }
   .disabled {
     pointer-events: none;
