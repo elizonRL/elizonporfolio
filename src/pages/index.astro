@@ -5,11 +5,10 @@ import Header from '../components/Header.astro';
 import Proyectos from '../components/Proyectos.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Elizon's Porfolio">
 	<Header/>
 	<main>
 		<Info />
-		
 		<Proyectos />
 	</main>
 </Layout>
@@ -17,12 +16,18 @@ import Proyectos from '../components/Proyectos.astro';
 <style>
 	main {
 		margin: auto ;
-		padding: 1rem;
+		padding: 20px;
 		width: 800px;
 		max-width: calc(100% - 2rem);
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
+	}
+	@media (max-width: 800px) {
+		main {
+			width: 100%;
+			max-width: 100%;
+		}
 	}
 	
 </style>

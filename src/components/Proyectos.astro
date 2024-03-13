@@ -1,6 +1,10 @@
 ---
 import Dev from "./logos/Dev.astro";
 import Link from "./logos/Link.astro";
+import Angular from "./logos/Angular.astro";
+import Githup from "./logos/Githup.astro";
+import Css from "./logos/Css.astro";
+import Ionic from "./logos/Ionic.astro";
 ---
 
 <section>
@@ -14,17 +18,37 @@ import Link from "./logos/Link.astro";
     </div>
     <div class="info">
       <h2>Proyecto Egresado UASD</h2>
-      <span>Ionic</span>
-      <span>Angular</span>
-      <span>CSS</span>
+      <div class="bages">
+        <span>
+          <Ionic />
+          Ionic</span>
+        <span>
+          <Angular />
+          Angular</span
+        >
+        <span>
+          <Css />
+          CSS
+        </span>
+      </div>
       <p>
         Proyecto de la Universidad Autónoma de Santo Domingo, para la gestión de
         egresados.
       </p>
-      <a href="https://egresados.uasd.edu.do" target="_blank" class="disabled">
-        <p><Link/></p>
-        Ver Proyecto
-    </a>
+      <div class="btn">
+        <a
+          href="https://egresados.uasd.edu.do"
+          target="_blank"
+          class="disabled"
+        >
+          <p><Link /></p>
+          Ver Proyecto
+        </a>
+        <a href="" target="_blank">
+          <p><Githup /></p>
+          Ver Proyecto
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -45,6 +69,20 @@ import Link from "./logos/Link.astro";
   .info {
     margin-left: 30px;
   }
+  .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .bages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
   img {
     width: 300px;
     height: 250px;
@@ -53,7 +91,7 @@ import Link from "./logos/Link.astro";
     transition: all 0.3s ease-in-out;
   }
   img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   h2 {
@@ -68,13 +106,17 @@ import Link from "./logos/Link.astro";
     -webkit-text-fill-color: transparent;
   }
   span {
+    display: flex;
     background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     color: #fff;
     padding: 0 25px;
     border-radius: 20px;
     border: 1px solid #fff;
   }
-  a{
+  a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,15 +130,15 @@ import Link from "./logos/Link.astro";
     border-radius: 30px;
     transition: all 0.3s ease-in-out;
   }
-  a:hover{
+  a:hover {
     background-color: #fff;
     color: #000;
     transform: scale(1.1);
   }
-  p{
+  p {
     margin-right: 5px;
   }
-  .disabled{
+  .disabled {
     pointer-events: none;
   }
   @media (max-width: 800px) {
