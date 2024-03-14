@@ -11,8 +11,12 @@ import Birrete from "./logos/Birrete.astro";
     <div>
       <h2>Universidad Autonoma de Santo Domingo (UASD)</h2>
       <span>2016 - 2024</span>
-      <p>Lienciatura en Informatica</p>
-      <p>Grado - Licenciado en Informatica</p>
+      <div class="generales">
+        <p>Titulo - Licenciado en Informatica</p>
+        <p>Academia - UASD</p>
+        <p>Faculltad - Ciencias</p>
+        <p>Escuela - Informatica</p>
+      </div>
     </div>
   </div>
   <div class="card">
@@ -23,24 +27,33 @@ import Birrete from "./logos/Birrete.astro";
     </div>
   </div>
 </section>
-  <style>
-    .card {
-      padding: 0 20px;
-      border-left: 1px solid #eaeaea;
-    }
-    .title {
-      display: flex;
-      align-items: center;
-    }
-    h2 {
-      font-size: 20px;
-    }
-    span {
-      font-size: 14px;
-      color: #9e9c9c;
-    }
-    p {
-      font-size: 16px;
-    }
-  </style>
-
+<style>
+  .card {
+    padding: 0 20px;
+    border-left: 1px solid #eaeaea;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+  }
+  .title h1 {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .generales {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    margin-top: 10px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  span {
+    font-size: 14px;
+    color: #9e9c9c;
+  }
+  p {
+    font-size: 16px;
+  }
+</style>

@@ -3,6 +3,7 @@ import Boton from "../components/Boton.astro";
 import Linkedin from "./logos/Linkedin.astro";
 import Email from "./logos/Email.astro";
 import DominicanFlag from "./logos/DominicanFlag.astro";
+import Dwfiles from "./logos/Dwfiles.astro";
 ---
 
 <section>
@@ -33,6 +34,9 @@ import DominicanFlag from "./logos/DominicanFlag.astro";
         <Email slot="logo" />
         <span slot="text">Contact</span>
       </Boton>
+      <Boton href="/cv.pdf">
+        <Dwfiles slot="logo" />
+        <span slot="text">Download CV</span>
     </div>
   </div>
 </section>
