@@ -1,35 +1,29 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Info from '../components/Info.astro';
-import Header from '../components/Header.astro';
-import Proyectos from '../components/Proyectos.astro';
-import Estudios from '../components/Estudios.astro';
+import Layout from "../layouts/Layout.astro";
+import Info from "../components/Info.astro";
+import Header from "../components/Header.astro";
+import Proyectos from "../components/Proyectos.astro";
+import Estudios from "../components/Estudios.astro";
 ---
 
 <Layout title="Elizon's Porfolio">
-	<Header/>
-	<main>
-		<Info />
-		<Proyectos />
-		<Estudios />
-	</main>
+  <Header />
+  <main>
+    <Info />
+    <Proyectos />
+    <Estudios />
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto ;
-		padding: 20px;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	@media (max-width: 800px) {
-		main {
-		
-			margin: auto;
-		}
-	}
-	
+  main {
+    margin: auto;
+    padding: 20px;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  
 </style>
