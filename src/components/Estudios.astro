@@ -29,8 +29,27 @@ import Birrete from "./logos/Birrete.astro";
 </section>
 <style>
   .card {
+    position: relative;
     padding: 0 20px;
-    border-left: 1px solid #eaeaea;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 120%;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    left:-15px;
+    top: 10px;
+  }
+  .card::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #eaeaea;
+    left: -22px;
+    top: 8px;
   }
   .title {
     display: flex;
