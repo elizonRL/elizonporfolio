@@ -7,8 +7,9 @@ import Estudios from "../components/Estudios.astro";
 ---
 
 <Layout title="Elizon's Porfolio">
-  <Header />
+  
   <main>
+    <Header />
     <Info />
     <Proyectos />
     <Estudios />
@@ -24,6 +25,12 @@ import Estudios from "../components/Estudios.astro";
     color: white;
     font-size: 20px;
     line-height: 1.6;
+  }
+  @media (max-width: 800px) {
+    main {
+      margin: auto;
+      width: 100%;
+    }
   }
   
 </style>
