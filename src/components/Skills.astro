@@ -1,0 +1,49 @@
+---
+import Html from "./logos/Html.astro";
+import Skillslogo from "./logos/Skillslogo.astro";
+---
+
+<section>
+  <div class="header">
+    <Skillslogo />
+    <h1>Stack & Soft Skills</h1>
+  </div>
+  <div>
+    <div class="title">
+      <h3>Skill Stack</h3>
+      <span>Languages & Framework</span>
+    </div>
+    <div class="grid">
+      <div class="logos">
+        <Html />
+        <h4>HTML</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  section {
+    border: 1px solid #696767;
+    border-radius: 10px;
+    
+  }
+  h1 {
+    margin-left: 10px;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .title {
+    margin: 10px;
+  }
+  .title span {
+    font-size: 1.5rem;
+    color: #b8b5b5;
+  }
+  
+</style>
