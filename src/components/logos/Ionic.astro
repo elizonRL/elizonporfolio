@@ -1,9 +1,12 @@
+---
+const {width, height} = Astro.props;
+---
 <svg
   xmlns="http://www.w3.org/2000/svg"
   class="ionicon"
   viewBox="0 0 512 512"
-  width="24"
-  height="20"
+  width=`${width}`
+  height=`${height}`
   fill="currentColor"
   ><path d="M256 153.9A102.1 102.1 0 10358.1 256 102.23 102.23 0 00256 153.9z"
   ></path><circle cx="402.59" cy="116.45" r="46.52"></circle><path

@@ -1,8 +1,8 @@
 ---
-const { href } = Astro.props;
+const { href, download} = Astro.props;
 ---
 
-<a href=`${href}` target="_blank" rel="noopener">
+<a href=`${href}` target="_blank" rel="noopener" download=`${download}`>
   <slot name="logo" />
   <slot name="text" />
 </a>

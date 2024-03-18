@@ -6,6 +6,12 @@ import Githup from "./logos/Githup.astro";
 import Css from "./logos/Css.astro";
 import Ionic from "./logos/Ionic.astro";
 import Boton from "./Boton.astro";
+import Tyscript from "./logos/Tyscript.astro";
+import Java from "./logos/Java.astro";
+import Spring from "./logos/Spring.astro";
+import Html from "./logos/Html.astro";
+import Javascript from "./logos/Javascript.astro";
+import Mysql from "./logos/Mysql.astro";
 ---
 
 <section>
@@ -21,23 +27,27 @@ import Boton from "./Boton.astro";
       <h2>Proyecto Egresado UASD</h2>
       <div class="bages">
         <span>
-          <Ionic />
+          <Ionic width="24" height="20" />
           Ionic</span
         >
         <span>
-          <Angular />
+          <Angular width="24" height="20" />
           Angular</span
         >
         <span>
-          <Css />
+          <Css width="24" height="20"/>
           CSS
+        </span>
+        <span>
+          <Tyscript width="24" height="20"/>
+          Tyscript
         </span>
       </div>
       <p>
         This is a project developed as part of the university degree.
         Collaborated on the <small class="degradado">front end</small> on the design and login logic,
         authentication token logic, password recovery logic and the design of
-        your views, tweaks to some other views.
+        your views and modify other views of the aplication.
       </p>
       <div class="btn">
         <a
@@ -53,7 +63,7 @@ import Boton from "./Boton.astro";
           href="https://github.com/ericmguzmanc/egresados-uasd"
           target="_blank"
         >
-          <Githup slot="logo" />
+          <Githup slot="logo" width="24" height="24"/>
           <p slot="text">Githup</p>
         </Boton>
       </div>
@@ -67,23 +77,35 @@ import Boton from "./Boton.astro";
       <h2>Inquire about insurance policies</h2>
       <div class="bages">
         <span>
-          <Ionic />
-          Ionic</span
+          <Java width="24" height="20"/>
+          Java</span
         >
         <span>
-          <Angular />
-          Angular</span
+          <Spring width="24" height="20" />
+          Spring</span
         >
         <span>
-          <Css />
+          <Css width="24" height="20"/>
           CSS
+        </span>
+        <span>
+          <Html width="24" height="20"/>
+          HTML
+        </span>
+        <span>
+          <Javascript width="24" height="20"/>
+          JavaScript
+        </span>
+        <span>
+          <Mysql width="24" height="20"/>
+          Mysql
         </span>
       </div>
       <p>
         This is a project developed as part of the university degree.
         Collaborated on the <small class="degradado">front end</small> on the design and login logic,
         authentication token logic, password recovery logic and the design of
-        your views, tweaks to some other views.
+        your views y tweaks to some other views.
       </p>
       <div class="btn">
         <a
@@ -99,7 +121,7 @@ import Boton from "./Boton.astro";
           href="https://github.com/ericmguzmanc/egresados-uasd"
           target="_blank"
         >
-          <Githup slot="logo" />
+          <Githup slot="logo" width="24" height="24"/>
           <p slot="text">Githup</p>
         </Boton>
       </div>
@@ -132,11 +154,11 @@ import Boton from "./Boton.astro";
 
   }
   .bages {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    margin: 10px;
+    padding: 10px;
   }
   img {
     width: 300px;

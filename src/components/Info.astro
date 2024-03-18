@@ -34,7 +34,7 @@ import Dwfiles from "./logos/Dwfiles.astro";
         <Email slot="logo" />
         <span slot="text">Contact</span>
       </Boton>
-      <Boton href="/cv.pdf">
+      <Boton href="./curriculum-Nuevo.pdf" download="Elizon's-CV">
         <Dwfiles slot="logo" />
         <span slot="text">Download CV</span>
     </div>
@@ -94,5 +94,26 @@ import Dwfiles from "./logos/Dwfiles.astro";
   span {
     font-weight: 700;
     margin: 5px;
+  }
+  @media (max-width: 768px) {
+    section{
+      padding: 20px 0;
+      width: 100%;
+    }
+    .header {
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    .imagen {
+      margin-top: 20px;
+    }
+    .buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 </style>

@@ -1,6 +1,97 @@
 ---
+import Angular from "./logos/Angular.astro";
+import Cplus from "./logos/Cplus.astro";
+import Css from "./logos/Css.astro";
+import Git from "./logos/Git.astro";
+import Githup from "./logos/Githup.astro";
 import Html from "./logos/Html.astro";
+import Ionic from "./logos/Ionic.astro";
+import Java from "./logos/Java.astro";
+import Javascript from "./logos/Javascript.astro";
+import Mongodb from "./logos/Mongodb.astro";
+import Mysql from "./logos/Mysql.astro";
+import Node from "./logos/Node.astro";
+import Phyton from "./logos/Phyton.astro";
+import React from "./logos/React.astro";
 import Skillslogo from "./logos/Skillslogo.astro";
+import Tyscript from "./logos/Tyscript.astro";
+import Vue from "./logos/Vue.astro";
+
+const softSkills = [
+  {
+    title: "Communication",
+    softChaild: [
+      "Active listening ",
+      "Verbal communication",
+      "Written communication",
+      "Nonverbal communication",
+      
+    ],
+  },
+  {
+    title: "Teamwork",
+    softChaild: [
+      "Conflict resolution ",
+      "Mediation",
+      "Accountability",
+      "Collaboration",
+    ],
+  },
+  {
+    title: "Problem-solving",
+    softChaild: [
+      "Critical thinking",
+      "Creativity",
+      "Strategic thinking",
+      "Initiative",
+    ],
+  },
+  {
+    title: "Work ethic",
+    softChaild: [
+      "Time management",
+      "Punctuality",
+      "Organization",
+      "Dedication",
+    ],
+  },
+  {
+    title: "Adaptability",
+    softChaild: [
+      "Flexibility",
+      "Open-mindedness",
+      "Willingness to learn",
+      "Resilience",
+    ],
+  },
+  {
+    title: "Leadership",
+    softChaild: [
+      "Delegation",
+      "Motivation",
+      "Inspiration",
+      "Empathy",
+    ],
+  },
+  {
+    title: "Creativity",
+    softChaild: [
+      "Innovation",
+      "Originality",
+      "Imagination",
+      "Artistic",
+    ],
+  },
+  {
+    title: "Interpersonal",
+    softChaild: [
+      "Empathy",
+      "Patience",
+      "Tolerance",
+      "Diplomacy",
+    ],
+  }
+];
 ---
 
 <section>
@@ -11,12 +102,92 @@ import Skillslogo from "./logos/Skillslogo.astro";
   <div>
     <div class="title">
       <h3>Skill Stack</h3>
-      <span>Languages & Framework</span>
+      <span>Languages & Frameworks</span>
     </div>
     <div class="grid">
       <div class="logos">
-        <Html />
-        <h4>HTML</h4>
+        <Html width="44" heigth="44" />
+        <span>HTML</span>
+      </div>
+      <div class="logos">
+        <Css width="44" heigth="44" />
+        <span>Css</span>
+      </div>
+      <div class="logos">
+        <Ionic width="44" heigth="44" />
+        <span>Ionic</span>
+      </div>
+      <div class="logos">
+        <Phyton width="44" heigth="44" />
+        <span>Phyton</span>
+      </div>
+      <div class="logos">
+        <Vue width="44" heigth="44" />
+        <span>Vue.js</span>
+      </div>
+      <div class="logos">
+        <Angular width="44" heigth="44" />
+        <span>Angular</span>
+      </div>
+      <div class="logos">
+        <Node width="44" heigth="44" />
+        <span>Node.js</span>
+      </div>
+      <div class="logos">
+        <Mysql width="44" heigth="44" />
+        <span>Mysql</span>
+      </div>
+      <div class="logos">
+        <React width="44" heigth="44" />
+        <span>React</span>
+      </div>
+      <div class="logos">
+        <Mongodb width="44" heigth="44" />
+        <span>Mongodb</span>
+      </div>
+      <div class="logos">
+        <Tyscript width="44" heigth="44" />
+        <span>Tyscript</span>
+      </div>
+      <div class="logos">
+        <Javascript width="44" heigth="44" />
+        <span>JavaScript</span>
+      </div>
+      <div class="logos">
+        <Java width="44" heigth="44" />
+        <span>Java</span>
+      </div>
+      <div class="logos">
+        <Cplus width="44" heigth="44" />
+        <span>C++</span>
+      </div>
+      <div class="logos">
+        <Git width="44" height="44" />
+        <span>Git</span>
+      </div>
+      <div class="logos">
+        <Githup width="44" height="44" />
+        <span>GitHup</span>
+      </div>
+    </div>
+    <div class="title">
+      <h3>Soft Skill</h3>
+      <span>attributes & abilities</span>
+      <div class="grid2">
+        {
+          softSkills.map((skill) => (
+            <div class="soft">
+              <h4>{skill.title}</h4>
+              <ul>
+                {skill.softChaild.map((chaild) => (
+                  <li>
+                    <span>{chaild}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>
@@ -25,7 +196,6 @@ import Skillslogo from "./logos/Skillslogo.astro";
   section {
     border: 1px solid #696767;
     border-radius: 10px;
-    
   }
   h1 {
     margin-left: 10px;
@@ -45,5 +215,77 @@ import Skillslogo from "./logos/Skillslogo.astro";
     font-size: 1.5rem;
     color: #b8b5b5;
   }
-  
+  .grid {
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    place-items: center;
+    margin-inline: 30px;
+    padding-inline: 10px;
+  }
+  .grid2 {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    place-items: center;
+    margin-inline: 30px;
+    padding-inline: 10px;
+  }
+  .logos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    border: #555151 1px solid;
+    border-radius: 10px;
+    background-color: rgba(1, 2, 1, 0.3);
+    transition: all 0.3s ease-in-out;
+    padding: 10px;
+  }
+  .soft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    margin: 20px auto;
+    transition: all 0.3s ease-in-out;
+    border: #555151 1px solid;
+    border-radius: 10px;
+    background-color: rgba(16, 22, 16, 0.3);
+    padding: 10px 0;
+    box-sizing: content-box;
+  }
+  .soft span {
+    font-size: 0.9rem;
+    color: #949393;
+    line-height: 5px;
+  }
+  .logos span {
+    font-size: 1.5rem;
+    color: #949393;
+  }
+  .logos:hover {
+    transform: scale(1.1);
+    background-color: rgba(1, 2, 1, 0.5);
+  }
+  .soft h4 {
+    font-size: 1rem;
+    color: #fff;
+    line-height: 5px;
+  }
+  .soft ul {
+    list-style: none;
+    padding: 0;
+
+  }
+  .soft:hover {
+    transform: scale(1.1);
+    background-color: rgba(16, 22, 16, 0.5);
+    
+  }
 </style>
