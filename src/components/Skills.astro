@@ -25,7 +25,6 @@ const softSkills = [
       "Verbal communication",
       "Written communication",
       "Nonverbal communication",
-      
     ],
   },
   {
@@ -66,31 +65,34 @@ const softSkills = [
   },
   {
     title: "Leadership",
-    softChaild: [
-      "Delegation",
-      "Motivation",
-      "Inspiration",
-      "Empathy",
-    ],
+    softChaild: ["Delegation", "Motivation", "Inspiration", "Empathy"],
   },
   {
     title: "Creativity",
-    softChaild: [
-      "Innovation",
-      "Originality",
-      "Imagination",
-      "Artistic",
-    ],
+    softChaild: ["Innovation", "Originality", "Imagination", "Artistic"],
   },
   {
     title: "Interpersonal",
-    softChaild: [
-      "Empathy",
-      "Patience",
-      "Tolerance",
-      "Diplomacy",
-    ],
-  }
+    softChaild: ["Empathy", "Patience", "Tolerance", "Diplomacy"],
+  },
+];
+const logos = [
+  { title: "HTML", logo: Html },
+  { title: "Css", logo: Css },
+  { title: "Ionic", logo: Ionic },
+  { title: "Phyton", logo: Phyton },
+  { title: "Vue.js", logo: Vue },
+  { title: "Angular", logo: Angular },
+  { title: "Node.js", logo: Node },
+  { title: "Mysql", logo: Mysql },
+  { title: "React", logo: React },
+  { title: "Mongodb", logo: Mongodb },
+  { title: "Tyscript", logo: Tyscript },
+  { title: "Javascript", logo: Javascript },
+  { title: "Java", logo: Java },
+  { title: "C++", logo: Cplus },
+  { title: "Git", logo: Git },
+  { title: "Githup", logo: Githup },
 ];
 ---
 
@@ -105,93 +107,38 @@ const softSkills = [
       <span>Languages & Frameworks</span>
     </div>
     <div class="grid">
-      <div class="logos">
-        <Html width="44" heigth="44" />
-        <span>HTML</span>
-      </div>
-      <div class="logos">
-        <Css width="44" heigth="44" />
-        <span>Css</span>
-      </div>
-      <div class="logos">
-        <Ionic width="44" heigth="44" />
-        <span>Ionic</span>
-      </div>
-      <div class="logos">
-        <Phyton width="44" heigth="44" />
-        <span>Phyton</span>
-      </div>
-      <div class="logos">
-        <Vue width="44" heigth="44" />
-        <span>Vue.js</span>
-      </div>
-      <div class="logos">
-        <Angular width="44" heigth="44" />
-        <span>Angular</span>
-      </div>
-      <div class="logos">
-        <Node width="44" heigth="44" />
-        <span>Node.js</span>
-      </div>
-      <div class="logos">
-        <Mysql width="44" heigth="44" />
-        <span>Mysql</span>
-      </div>
-      <div class="logos">
-        <React width="44" heigth="44" />
-        <span>React</span>
-      </div>
-      <div class="logos">
-        <Mongodb width="44" heigth="44" />
-        <span>Mongodb</span>
-      </div>
-      <div class="logos">
-        <Tyscript width="44" heigth="44" />
-        <span>Tyscript</span>
-      </div>
-      <div class="logos">
-        <Javascript width="44" heigth="44" />
-        <span>JavaScript</span>
-      </div>
-      <div class="logos">
-        <Java width="44" heigth="44" />
-        <span>Java</span>
-      </div>
-      <div class="logos">
-        <Cplus width="44" heigth="44" />
-        <span>C++</span>
-      </div>
-      <div class="logos">
-        <Git width="44" height="44" />
-        <span>Git</span>
-      </div>
-      <div class="logos">
-        <Githup width="44" height="44" />
-        <span>GitHup</span>
-      </div>
+      {
+        logos.map((logo) => (
+          <div class="logos">
+            <logo.logo width="44" heigth="44" />
+            <span>{logo.title}</span>
+          </div>
+        ))
+      }
     </div>
-    <div class="title">
-      <h3>Soft Skill</h3>
-      <span>attributes & abilities</span>
-      <div class="grid2">
-        {
-          softSkills.map((skill) => (
-            <div class="soft">
-              <h4>{skill.title}</h4>
-              <ul>
-                {skill.softChaild.map((chaild) => (
-                  <li>
-                    <span>{chaild}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))
-        }
-      </div>
+  </div>
+  <div class="title">
+    <h3>Soft Skill</h3>
+    <span>attributes & abilities</span>
+    <div class="grid2">
+      {
+        softSkills.map((skill) => (
+          <div class="soft">
+            <h4>{skill.title}</h4>
+            <ul>
+              {skill.softChaild.map((chaild) => (
+                <li>
+                  <span>{chaild}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
+
 <style>
   section {
     border: 1px solid #696767;
@@ -202,6 +149,7 @@ const softSkills = [
     background: linear-gradient(90deg, #ff7e5f, #feb47b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
   }
   .header {
     display: flex;
@@ -281,11 +229,9 @@ const softSkills = [
   .soft ul {
     list-style: none;
     padding: 0;
-
   }
   .soft:hover {
     transform: scale(1.1);
     background-color: rgba(16, 22, 16, 0.5);
-    
   }
 </style>
