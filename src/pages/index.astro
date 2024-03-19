@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Info from "../components/Info.astro";
-import Header from "../components/Header.astro";
 import Proyectos from "../components/Proyectos.astro";
 import Estudios from "../components/Estudios.astro";
 import Skills from "../components/Skills.astro";
@@ -11,12 +10,11 @@ import Aboutme from "../components/Aboutme.astro";
 <Layout title="Elizon's Porfolio">
   
   <main>
-    <Header />
     <Info />
-    <Proyectos />
+    <Proyectos id="proyects"/>
     <Estudios  id="estudios"/>
-    <Skills/>
-    <Aboutme/>
+    <Skills id="stack-&-softSkill"/>
+    <Aboutme id="about-me"/>
   </main>
 </Layout>
 

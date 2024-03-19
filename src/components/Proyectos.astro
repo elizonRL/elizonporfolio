@@ -12,9 +12,12 @@ import Spring from "./logos/Spring.astro";
 import Html from "./logos/Html.astro";
 import Javascript from "./logos/Javascript.astro";
 import Mysql from "./logos/Mysql.astro";
+
+
+const {id}= Astro.props;
 ---
 
-<section>
+<section id={id}>
   <div class="title">
     <Dev />
     <h1>project</h1>
@@ -50,14 +53,14 @@ import Mysql from "./logos/Mysql.astro";
         the design of your views and modify other views of the aplication.
       </p>
       <div class="btn">
-        <a
+        <Boton
           href="https://egresados.uasd.edu.do"
           target="_blank"
           class="disabled"
         >
-          <Link />
-          Ver Proyecto
-        </a>
+          <Link slot="logo"/>
+          <p slot="text">View Proyect</p>
+        </Boton>
 
         <Boton
           href="https://github.com/ericmguzmanc/egresados-uasd"
@@ -107,14 +110,14 @@ import Mysql from "./logos/Mysql.astro";
         vehicles associated with that policy and expiration time.
       </p>
       <div class="btn">
-        <a
+        <Boton
           href="https://egresados.uasd.edu.do"
           target="_blank"
           class="disabled"
         >
-          <Link />
-          Ver Proyecto
-        </a>
+          <Link slot="logo"/>
+          <p slot="text">View Proyect</p>
+        </Boton>
 
         <Boton
           href="https://github.com/ericmguzmanc/egresados-uasd"
@@ -206,7 +209,6 @@ import Mysql from "./logos/Mysql.astro";
     display: flex;
     align-items: center;
     justify-content: center;
-
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
@@ -224,9 +226,6 @@ import Mysql from "./logos/Mysql.astro";
   p {
     margin-inline: 1px;
     text-wrap: wrap;
-  }
-  .disabled {
-    pointer-events: none;
   }
   @media (max-width: 800px) {
     .card {

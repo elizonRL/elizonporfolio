@@ -1,10 +1,11 @@
 ---
 import Birrete from "./logos/Birrete.astro";
+const {id} = Astro.props;
 ---
 
-<section>
+<section id=`${id}` data-section={id}>
   <div class="title">
-    <Birrete />
+    <Birrete /> 
     <h1>Estudios</h1>
   </div>
   <div class="card">

@@ -1,55 +1,82 @@
+---
+const navItems = [
+  {
+    title: "Proyects",
+    label: "Proyects",
+    href: "/#proyects",
+  },
+  {
+    title: "Estudios",
+    label: "estudios",
+    href: "/#estudios",
+  },
+  {
+    title: "Stack & SoftSkill",
+    label: "stack-&-softSkill",
+    href: "/#stack-&-softSkill",
+  },
+  {
+    title: "About Me",
+    label: "about-me",
+    href: "/#about-me",
+  },
+];
+---
+
 <header>
   <nav>
     <ul>
-      <li><a href="#">Poryectos</a></li>
-      <li><a href="#esrudios">Estudios</a></li>
-      <li><a href="#">Stack & SoftSkill</a></li>
-      <li><a href="#">Sobre Mí</a></li>
+      {
+        navItems.map((link) => {
+          return (
+            <li>
+              <a href={link.href} aria-label={link.label}>
+                {link.title ? link.title : link.label}
+              </a>
+            </li>
+          );
+        })
+      }
     </ul>
   </nav>
 </header>
 <style>
+  header {
+    position: sticky;
+    margin: auto;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgba(116, 168, 168, 0.5);
+  }
 
-    header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: sticky;
-      margin: auto;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      width: 100%;
-      border-radius: 20px;
-      background-color: rgba(116, 168, 168, 0.5);
-    }
-    
-    nav ul {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      list-style: none;
-      
-    }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 10px;
+  }
 
-    nav ul li {
-      flex-direction: column;
-      margin-right: 10px;
-      padding-left: 10px;
-    }
+  nav ul li {
+    flex-direction: column;
+    margin-right: 10px;
+  }
 
-    nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      text-transform: uppercase;
-      transition: all 0.3s ease-in-out;
-    }
-    nav ul li:hover {
-      border-radius: 5px;
-      color: #fff;
-      background: linear-gradient(90deg, #ff7e5f, #feb47b);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  </style>
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+  }
+  nav ul li:hover {
+    border-radius: 5px;
+    color: #fff;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

@@ -94,9 +94,10 @@ const logos = [
   { title: "Git", logo: Git },
   { title: "Githup", logo: Githup },
 ];
+const {id}= Astro.props;
 ---
 
-<section>
+<section id={id}>
   <div class="header">
     <Skillslogo />
     <h1>Stack & Soft Skills</h1>
