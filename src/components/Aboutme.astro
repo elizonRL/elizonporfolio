@@ -1,29 +1,38 @@
 ---
+import AboutMeLogo from "./logos/AboutMeLogo.astro";
 const { id } = Astro.props;
 ---
 
 <section id={id}>
-  <h1>About Me</h1>
-  <img src="/img/graduacion.jpg" alt="A picture of me" />
-  <div>
-    <p>
-      I am a software engineer with a passion for creating and building things.
-      I have a strong background in web development and have worked with a
-      variety of technologies. I am always looking for new opportunities to
-      learn and grow as a developer.
-    </p>
-    <p>
-      I am currently working as a software engineer at <a
-        href="https://www.athenahealth.com/">athenahealth</a
-      > where I work on the front-end of the athenaOne platform. I am also a part-time
-      student at <a href="https://www.northeastern.edu/"
-        >Northeastern University</a
-      > where I am pursuing a Master's degree in Computer Science.
-    </p>
-    <p>
-      In my free time, I enjoy working on side projects, playing video games,
-      and spending time with my friends and family.
-    </p>
+  <div class="title">
+    <AboutMeLogo />
+    <h1>About Me</h1>
+  </div>
+  <div class="about">
+    <div>
+      <p>
+        Hi I'm Elizon! <small class="gradiente"
+          >Graduated in computer science from the Autonomous University of Santo
+          Domingo.</small
+        > where I developed my skills and knowledge, which led me to train in computer
+        science and science in general.
+      </p>
+      <p>
+        In my beginnings in programming, <small class="gradiente"
+          >I was programming in a notepad, which helped me to debug the code
+          better</small
+        > and even to improve the programming logic, improving every day in learning.
+      </p>
+      <p>
+        I worked <small class="gradiente">
+          collaboratively with other students on some projects
+        </small>, I also collaborated to share knowledge that I acquired during
+        the time I studied.
+      </p>
+    </div>
+    <div>
+      <img src="/img/graduacion.jpg" alt="A picture of me" />
+    </div>
   </div>
 </section>
 <style>
@@ -36,10 +45,10 @@ const { id } = Astro.props;
     font-weight: 500;
   }
   img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit:cover;
     margin-left: 1rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -50,5 +59,22 @@ const { id } = Astro.props;
     text-wrap: wrap;
     margin-left: 1rem;
     text-overflow: clip;
+  }
+  small {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .gradiente {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+  }
+  .about {
+    display: flex;
+    
   }
 </style>
