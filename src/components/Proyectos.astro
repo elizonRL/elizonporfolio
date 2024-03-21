@@ -97,20 +97,20 @@ const proyect = [
   {
     proyect.map((proyect, index) => (
       <div class="card">
-        <div class="img-proyect">
-          <img src={proyect.img} alt={proyect.title} />
+        <div class="img-cont">
+          <div class="img-proyect">
+            <img src={proyect.img} alt={proyect.title} />
+          </div>
         </div>
         <div class="info">
           <h2>{proyect.title}</h2>
           <div class="bages">
-            {
-              proyect.tags.map((tag) => (
-                <span>
-                  <tag.logo width="24" height="20" />
-                  {tag.name}
-                </span>
-              ))
-            }
+            {proyect.tags.map((tag) => (
+              <span>
+                <tag.logo width="24" height="20" />
+                {tag.name}
+              </span>
+            ))}
           </div>
           <p>{proyect.description}</p>
           <div class="btn">
@@ -244,17 +244,18 @@ const proyect = [
   }
   .card {
     display: grid;
-    gap: 1rem;
+    gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-top: 2rem;
   }
-  
+
   .btn {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     margin-top: 1rem;
+    
   }
   .bages {
     display: grid;
@@ -263,21 +264,50 @@ const proyect = [
     margin: 10px;
     padding: 10px;
   }
+  img-cont {
+    width: 100%;
+    height: 100%;
+  }
   .img-proyect {
+    width: 100%;
+    position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    grid-column: span 6;
+    grid-row: span 5;
+    transition:
+      duration 0.5s ease-in-out,
+      transform 0.5s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    border-radius: 1rem;
+    @media (max-width: 639px) {
+      border-radius: 0.5rem;
+    }
+    &:hover {
+      @media (min-width: 768px) {
+        transform: translateY(-10px); /* Adjust hover transform as desired */
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+      }
+    }
   }
   img {
-    width: 100%;
-    height: 60%;
     object-fit: cover;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
-   
+    object-position: top;
+    width: 100%;
+    height: 18rem; /* Adjust height as needed */
+    transition: duration 0.5s ease-in-out;
+    @media (max-width: 639px) {
+      height: auto;
+    }
+    &:hover {
+      @media (min-width: 768px) {
+        transform: scale(1.1); /* Adjust hover scale as desired */
+      }
+    }
   }
   img:hover {
-    
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   h2 {
