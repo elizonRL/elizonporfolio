@@ -48,9 +48,10 @@ const proyect = [
       },
     ],
     description:
-      "This is a project developed as part of the university degree. Collaborated on the front end on the design and login logic, authentication token logic, password recovery logic and the design of your views and modify other views of the aplication.",
+      "Mobile application to showcase the skills and experiences of UASD graduates, created from scratch with ionic, angular and design with css",
     link: "https://egresados.uasd.edu.do",
     githup: "https://github.com/ericmguzmanc/egresados-uasd",
+    class: "disabled",
   },
   {
     img: "/img/segurosDaniel.webp",
@@ -82,9 +83,10 @@ const proyect = [
       },
     ],
     description:
-      "This is a project that FullStack developed to query a database, where if you enter an insurance policy it will show you who owns the policy, vehicles associated with that policy and expiration time.",
+      "FullStack developed to query a database, where if you enter an insurance policy it will show you who owns the policy, vehicles associated with that policy and expiration time.",
     link: "https://egresados.uasd.edu.do",
     githup: "",
+    class: "disabled",
   },
 ];
 ---
@@ -114,7 +116,7 @@ const proyect = [
           </div>
           <p>{proyect.description}</p>
           <div class="btn">
-            <Boton href={proyect.link} target="_blank" class="disabled">
+            <Boton href={proyect.link} target="_blank" class=`${proyect.class}`>
               <Link slot="logo" />
               <p slot="text">View Proyect</p>
             </Boton>
@@ -246,16 +248,16 @@ const proyect = [
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin-top: 2rem;
+    margin-top: 80px;
+    
   }
 
   .btn {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content:space-between;
     align-items: center;
     margin-top: 1rem;
-    
   }
   .bages {
     display: grid;
@@ -344,7 +346,9 @@ const proyect = [
     text-transform: uppercase;
   }
   p {
-    margin-inline: 1px;
+    font-size: 16px;
+    color: #b8b0b0;
+    margin-inline: 0.5px;
     text-wrap: wrap;
   }
   @media (max-width: 800px) {
