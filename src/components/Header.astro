@@ -44,14 +44,20 @@ const navItems = [
   header {
     position: sticky;
     margin: auto;
-    top: 0;
-    left: 0;
+    top: 0px;
     z-index: 1;
     width: 100%;
     border-radius: 20px;
-    background-color: rgba(116, 168, 168, 0.5);
+    animation: adjust-header linear both;
+    animation-timeline: scroll();
+    animation-range: 0% 100%;
+    backdrop-filter: blur(10px);
   }
-
+  @keyframes adjust-header {
+    to{
+      background: rgba(0, 0, 0, .3) ;
+    }
+  }
   nav ul {
     display: flex;
     justify-content: center;
