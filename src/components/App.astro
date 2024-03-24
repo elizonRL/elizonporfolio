@@ -5,11 +5,17 @@ import Proyectos from "../components/Proyectos.astro";
 import Estudios from "../components/Estudios.astro";
 import Skills from "../components/Skills.astro";
 import Aboutme from "../components/Aboutme.astro";
+
+// traducciones con i18n
+import {getI18N} from "../i18n";
+
+const {currentLocale = 'en'} = Astro;
+const i18n = getI18N({currentLocale});
 ---
 
 <Layout
-  title="Elizon's Porfolio"
-  description="Elizon's Porfolio, a software developer with a passion for learning and creating new things."
+  title={i18n.SEO_TITLE}
+  description={i18n.SEO_DESCRIPTION}
 >
   <main>
     <Info />
