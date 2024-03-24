@@ -1,13 +1,92 @@
 ---
+import { createEmitAndSemanticDiagnosticsBuilderProgram } from "typescript";
 import Birrete from "./logos/Birrete.astro";
-const {id} = Astro.props;
+
+const { id } = Astro.props;
+
+const studies = [
+  {
+    title: "Autonomous University of Santo Domingo (UASD)",
+    date: "2016/Jan - 2024/feb",
+    generales: [
+      "college degree - Licenciado en Informatica",
+      "Academy - UASD",
+      "Faculltad - Ciencias",
+      "Escuela - Informatica",
+      "Grado - Licenciado",
+    ],
+  },
+  {
+    title: "Autonomous University of Santo Domingo (UASD)",
+    date: "2020/jun - 2020/ago",
+    generales: [
+      "college degree - Analista de Datos SQL",
+      "Academy - UASD",
+      "Faculltad - Ciencias",
+      "Escuela - Informatica",
+      "Grado - Certificado",
+    ],
+  },
+  {
+    title: "Autonomous University of Santo Domingo (UASD)",
+    date: "2020/jun - 2020/ago",
+    generales: [
+      "Titulo - Developer in Java",
+      "Academy - UASD",
+      "ability - Java Developer",
+      "department - sciences",
+      "School - Informatica",
+      "Degree - certified",
+    ],
+  },
+  {
+    title: "Mastermind",
+    date: "2022/mar - 2022/abr",
+    generales: [
+      "Titulo - Desarrollo Web",
+      "Academy - Mastermind",
+      "Habilidades - HTML, CSS, JavaScript",
+      "Escuela - Mastermind",
+      "Grado - Certificado",
+    ],
+  },
+  {
+    title: "Mastermind",
+    date: "2022/abr - 2022/may",
+    generales: [
+      "Titulo - Web Development",
+      "Academy - Mastermind",
+      "Habilidades - Vue.js",
+      "Escuela - Mastermind",
+      "Grado - Certificado",
+    ],
+  },
+];
 ---
 
 <section id=`${id}` data-section={id}>
   <div class="title">
-    <Birrete /> 
-    <h1>Estudios</h1>
+    <Birrete />
+    <h1>Studies</h1>
   </div>
+  {
+    studies.map((study) => (
+      <div class="card">
+        <div>
+          <h2>{study.title}</h2>
+          <span>{study.date}</span>
+          <div class="generales">
+            {
+              study.generales.map((general) => (
+                <p>{general}</p>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    ))
+  }
+  <!--
   <div class="card">
     <div>
       <h2>Universidad Autonoma de Santo Domingo (UASD)</h2>
@@ -59,7 +138,7 @@ const {id} = Astro.props;
         <p>Grado - Certificado</p>
       </div>
     </div>
-  </div>
+  </div>-->
 </section>
 <style>
   .card {
@@ -72,7 +151,7 @@ const {id} = Astro.props;
     width: 1px;
     height: 120%;
     background: linear-gradient(90deg, #ff7e5f, #feb47b);
-    left:-15px;
+    left: -15px;
     top: 10px;
   }
   .card::after {
@@ -111,7 +190,7 @@ const {id} = Astro.props;
   p {
     font-size: 16px;
   }
-  section{
+  section {
     margin-bottom: 100px;
   }
 </style>
