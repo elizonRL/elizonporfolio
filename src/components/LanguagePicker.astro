@@ -1,0 +1,39 @@
+---
+import { languages } from "../i18n/ui";
+import {
+  getRouteFromUrl,
+  useTranslatedPath,
+  getLangFromUrl,
+} from "../i18n/utils";
+import ChevronIcon from "./logos/ChevronIcon.astro";
+const route = getRouteFromUrl(Astro.url);
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+
+const currentLocaleData = languages[lang];
+const otherLocales = Object.values(languages).filter(
+  (locale) => locale.code !== lang
+);
+---
+
+
+  {
+    otherLocales.map((locale) => (
+      <a href={translatePath(`/${route ? route : ""}`, locale.code)}>
+        <currentLocaleData.flag />
+        {locale.code ? currentLocaleData.code : locale.code}
+      </a>
+    ))
+  }
+
+<style>
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+</style>
