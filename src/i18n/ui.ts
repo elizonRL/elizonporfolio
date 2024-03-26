@@ -12,14 +12,14 @@ export const showDefaultLang = false;
 
 export const ui = {
     en: {
-        "nav.projects": "Projects",
-        "nav.studies": "Studies",
+        "nav.projects": "projects",
+        "nav.studies": "studies",
         "nav.stack & softSkill": "Stack & Soft Skills",
         "nav.about Me": "About Me",
     },
     es: {
-        "nav.projects": "Proyectos",
-        "nav.studies": "Estudios",
+        "nav.projects": "proyectos",
+        "nav.studies": "estudios",
         "nav.stack & softSkill": "Stack & Habilidades Blandas",
         "nav.about Me": "Acerca de Mí",
     },
@@ -27,27 +27,17 @@ export const ui = {
 
 export const routes = {
 	es: {
-		vota: 'vota',
-		info: 'info',
-		archivo: 'archivo',
-		'aviso-legal': 'aviso-legal',
-		privacidad: 'privacidad',
-		cookies: 'cookies',
+		proyetos: 'proyectos',
+		estudios: 'Estudios',
+		stack_y_soft_skills: 'stack & habilidades blandas',
+		acerca_de_mi: 'acerca de mí'
 	},
 	en: {
-		vota: 'vote',
-		info: 'information',
-		archivo: 'archive',
-		'aviso-legal': 'legal-notice',
-		privacidad: 'privacy',
-		cookies: 'cookies',
+		projetcs: 'porjects',
+		studies: 'studies',
+		stack: 'stack & soft skills',
+		about: 'about me'
+	
 	},
-	ca: {
-		vota: 'vota',
-		info: 'informacio',
-		archivo: 'arxiu',
-		'aviso-legal': 'avis-legal',
-		privacidad: 'privacitat',
-		cookies: 'cookies',
-	},
+
 };

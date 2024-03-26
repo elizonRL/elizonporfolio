@@ -6,11 +6,12 @@ interface Props {
 
 const { title , description } = Astro.props;
 import Header from "../components/Header.astro";
-import Dev from "../components/logos/Dev.astro";
+import { getLangFromUrl } from "@/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />

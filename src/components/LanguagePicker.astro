@@ -16,16 +16,24 @@ const otherLocales = Object.values(languages).filter(
 );
 ---
 
+<script>
+  const anchor: any = document.querySelector("a");
+  anchor.addEventListener("click", (e: any) => {
+    e.preventDefault();
+   
+  });
+</script>
 
+<button type="button">
   {
     otherLocales.map((locale) => (
       <a href={translatePath(`/${route ? route : ""}`, locale.code)}>
         <currentLocaleData.flag />
-        {locale.code ? currentLocaleData.code : locale.code}
+        <small>{locale.code ? currentLocaleData.code : locale.code}</small>
       </a>
     ))
   }
-
+</button>
 <style>
   a {
     display: flex;
@@ -35,5 +43,25 @@ const otherLocales = Object.values(languages).filter(
     color: #fff;
     text-transform: uppercase;
     font-size: 10px;
+  }
+  small {
+    margin-left: 5px;
+    font-size: 12px;
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    padding: 8px;
+    background: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    transition: ease-in-out .2s;
+  }
+  button:hover {
+    animation: both 0.5s ease-in-out;
+    background: rgba(0, 0, 0, .5);
   }
 </style>
