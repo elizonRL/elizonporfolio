@@ -5,5 +5,20 @@
   "HERRO_DESCRIPTION_GD": "Full Stack Web Development",
   "HERRO_DESCRIPTION_2": " graduate in computer science from the Autonomous University of Santo Domingo (UASD). I love programming and technology in general.",
   "BOTON_CONTACTO": "Contact",
-  "BOTON_DESCARGA": "Download CV"
+  "BOTON_DESCARGA": "Download CV",
+  "TITLE_PROJECTS": "Projects",
+  "TITLE_STUDIES": "Studies",
+  "UNIVESITY": "Autonomous University of Santo Domingo",
+  "ACADEMY": "Academy - UASD",
+  "DEGREE_UNIVERSITY": "Degree - Bachelor of Computer Science",
+  "ACADEMIC_PERIOD": "2016/Jan - 2024/Feb",
+  "FACULTY": "Faculty - Science",
+  "SCHOOL": "Computer Science",
+  "DEGREE": "Degree - Bachelor",
+  "CARREER_MASTERMIND": "Degree - Developer web full stack",
+  "ACADEMIC_PERIOD_MASTERMIND": "2022/Apr - 2021/Sep",
+  "SKILLS_MASTERMIND": "ABILITIES - Html , Css , Javascript, nodeJs, VUE.Js",
+  "DEGREE_CERTIFICATE": "Degree - Certificate",
+  "ACADEMY_MASTERMIND": "Academy - Mastermind",
+  "SQL_ANALYST": "Degree - SQL Data Analyst"
 }
