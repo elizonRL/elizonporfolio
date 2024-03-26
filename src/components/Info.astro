@@ -7,7 +7,7 @@ import Dwfiles from "./logos/Dwfiles.astro";
 // traduccion con i18n
 import { getI18N } from "../i18n";
 
-const { currentLocale = "en" } = Astro;
+const { currentLocale  } = Astro;
 const i18n = getI18N({ currentLocale });
 ---
 
@@ -18,7 +18,7 @@ const i18n = getI18N({ currentLocale });
       alt="Imagen de perfil de Elizon"
       class="imagen"
     />
-    <h1>Welcome to <spam class="gradiant">Elizon</spam> Porfolio</h1>
+    <h1>{i18n.PRESENTACION_1} <spam class="gradiant">Elizon</spam></h1>
     <span class="flag">
       <DominicanFlag />
     </span>
@@ -37,11 +37,11 @@ const i18n = getI18N({ currentLocale });
       </Boton>
       <Boton href="mailto:elizorodriguez16@gmail.com">
         <Email slot="logo" />
-        <span slot="text">Contact</span>
+        <span slot="text">{i18n.BOTON_CONTACTO}</span>
       </Boton>
       <Boton href="./curriculum-Nuevo.pdf" download="Elizon's-CV">
         <Dwfiles slot="logo" />
-        <span slot="text">Download CV</span>
+        <span slot="text">{i18n.BOTON_DESCARGA}</span>
       </Boton>
     </div>
   </div>
@@ -82,7 +82,7 @@ const i18n = getI18N({ currentLocale });
     h1 {
       margin-left: 40px;
       font-weight: 700;
-      font-size: 35px;
+      font-size: 30px;
     }
     p {
       margin-top: 20px;
@@ -101,6 +101,7 @@ const i18n = getI18N({ currentLocale });
     }
     @media (max-width: 768px) {
       section {
+        min-width: 100%;
         padding: 20px 0;
         width: 100%;
       }

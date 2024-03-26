@@ -1,7 +1,7 @@
 ---
 import Dev from "./logos/Dev.astro";
 import Link from "./logos/Link.astro";
-import Angular from "./logos/Angular.astro";
+import Angular from "./logos/AngularLogo.astro";
 import Githup from "./logos/Githup.astro";
 import Css from "./logos/Css.astro";
 import Ionic from "./logos/Ionic.astro";
@@ -13,18 +13,13 @@ import Html from "./logos/Html.astro";
 import Javascript from "./logos/Javascript.astro";
 import Mysql from "./logos/Mysql.astro";
 
+import { getI18N } from "@/i18n";
+
+const {currentLocale} = Astro;
+const i18n = getI18N({currentLocale});
+
 const { id } = Astro.props;
-const bage = [
-  { name: "Ionic", logo: Ionic },
-  { name: "Angular", logo: Angular },
-  { name: "Css", logo: Css },
-  { name: "Tyscript", logo: Tyscript },
-  { name: "Java", logo: Java },
-  { name: "Spring", logo: Spring },
-  { name: "Html", logo: Html },
-  { name: "Javascript", logo: Javascript },
-  { name: "Mysql", logo: Mysql },
-];
+
 const proyect = [
   {
     img: "/img/egresados.jpg",
@@ -94,7 +89,7 @@ const proyect = [
 <section id={id}>
   <div class="title">
     <Dev />
-    <h1>project</h1>
+    <h1>{i18n.TITLE_PROJECTS}</h1>
   </div>
   {
     proyect.map((proyect, index) => (

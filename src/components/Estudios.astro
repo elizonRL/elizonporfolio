@@ -1,64 +1,55 @@
 ---
-import { createEmitAndSemanticDiagnosticsBuilderProgram } from "typescript";
+
 import Birrete from "./logos/Birrete.astro";
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 
 const { id } = Astro.props;
 
 const studies = [
   {
-    title: "Autonomous University of Santo Domingo (UASD)",
-    date: "2016/Jan - 2024/feb",
+    title: `${i18n.UNIVESITY}`,
+    date: `${i18n.ACADEMIC_PERIOD}`,
     generales: [
-      "college degree - Licenciado en Informatica",
-      "Academy - UASD",
-      "Faculltad - Ciencias",
-      "Escuela - Informatica",
-      "Grado - Licenciado",
+      `${i18n.DEGREE_UNIVERSITY}`,
+      `${i18n.ACADEMY}`,
+      `${i18n.FACULTY}`,
+      `${i18n.SCHOOL}`,
+      `${i18n.DEGREE}`,
     ],
   },
   {
-    title: "Autonomous University of Santo Domingo (UASD)",
-    date: "2020/jun - 2020/ago",
+    title: `${i18n.UNIVESITY}`,
+    date: `${i18n.PERIOD_SQL}`,
     generales: [
-      "college degree - Analista de Datos SQL",
-      "Academy - UASD",
-      "Faculltad - Ciencias",
-      "Escuela - Informatica",
-      "Grado - Certificado",
+      `${i18n.SQL_ANALYST}`,
+      `${i18n.ACADEMY}`,
+      `${i18n.FACULTY}`,
+      `${i18n.SCHOOL}`,
+      `${i18n.DEGREE_CERTIFICATE}`,
     ],
   },
   {
-    title: "Autonomous University of Santo Domingo (UASD)",
-    date: "2020/jun - 2020/ago",
+    title: `${i18n.UNIVESITY}`,
+    date: `${i18n.PERIOD_JAVA}`,
     generales: [
-      "Titulo - Developer in Java",
-      "Academy - UASD",
-      "ability - Java Developer",
-      "department - sciences",
-      "School - Informatica",
-      "Degree - certified",
-    ],
-  },
-  {
-    title: "Mastermind",
-    date: "2022/mar - 2022/abr",
-    generales: [
-      "Titulo - Desarrollo Web",
-      "Academy - Mastermind",
-      "Habilidades - HTML, CSS, JavaScript",
-      "Escuela - Mastermind",
-      "Grado - Certificado",
+      `${i18n.JAVA_DEGREE}`,
+      `${i18n.ACADEMY}`,
+      `${i18n.FACULTY}`,
+      `${i18n.SCHOOL}`,
+      `${i18n.DEGREE_CERTIFICATE}`,
+      
     ],
   },
   {
     title: "Mastermind",
-    date: "2022/abr - 2022/may",
+    date: `${i18n.ACADEMIC_PERIOD_MASTERMIND}`,
     generales: [
-      "Titulo - Web Development",
-      "Academy - Mastermind",
-      "Habilidades - Vue.js",
-      "Escuela - Mastermind",
-      "Grado - Certificado",
+      `${i18n.CARREER_MASTERMIND}`,
+      `${i18n.ACADEMY_MASTERMIND}`,
+      `${i18n.SKILLS_MASTERMIND}`,
+      `${i18n.DEGREE_CERTIFICATE}`,
     ],
   },
 ];
@@ -76,11 +67,9 @@ const studies = [
           <h2>{study.title}</h2>
           <span>{study.date}</span>
           <div class="generales">
-            {
-              study.generales.map((general) => (
-                <p>{general}</p>
-              ))
-            }
+            {study.generales.map((general) => (
+              <p>{general}</p>
+            ))}
           </div>
         </div>
       </div>

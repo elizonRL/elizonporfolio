@@ -9,7 +9,7 @@ import Aboutme from "../components/Aboutme.astro";
 // traducciones con i18n
 import {getI18N} from "../i18n";
 
-const {currentLocale = 'en'} = Astro;
+const {currentLocale } = Astro;
 const i18n = getI18N({currentLocale});
 ---
 
@@ -19,7 +19,7 @@ const i18n = getI18N({currentLocale});
 >
   <main>
     <Info />
-    <Proyectos id="proyects" />
+    <Proyectos id="projects" />
     <Estudios id="estudios" />
     <Skills id="stack-&-softSkill" />
     <Aboutme id="about-me" />
