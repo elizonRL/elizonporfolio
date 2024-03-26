@@ -9,5 +9,6 @@ export default defineConfig({
             prefixDefaultLocale: false,
         }
     },
-    
+    spa: true,
+    renderers: ["@astrojs/renderer-html"],
 });

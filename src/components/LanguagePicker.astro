@@ -16,24 +16,24 @@ const otherLocales = Object.values(languages).filter(
 );
 ---
 
-<script>
-  const anchor: any = document.querySelector("a");
-  anchor.addEventListener("click", (e: any) => {
-    e.preventDefault();
-   
-  });
-</script>
 
-<button type="button">
+
+<button type="button" >
   {
     otherLocales.map((locale) => (
-      <a href={translatePath(`/${route ? route : ""}`, locale.code)}>
+      <a href={translatePath(`/${route ? route : ""}`, locale.code)} >
         <currentLocaleData.flag />
         <small>{locale.code ? currentLocaleData.code : locale.code}</small>
       </a>
     ))
   }
 </button>
+<script>
+  const anchor: any = document.querySelector("a");
+  anchor.addEventListener("submit", (e: any) => {
+    e.preventDefault();
+  });
+</script>
 <style>
   a {
     display: flex;
