@@ -18,63 +18,82 @@ import Tyscript from "./logos/Tyscript.astro";
 import Vue from "./logos/Vue.astro";
 import Astrologo from "./logos/Astrologo.astro";
 
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
 const softSkills = [
   {
-    title: "Communication",
+    title: `${i18n.TITLE_SOFT_1}`,
     softChaild: [
-      "Active listening ",
-      "Verbal communication",
-      "Written communication",
-      "Nonverbal communication",
+      `${i18n.UL_SOFT_C1}`,
+      `${i18n.UL_SOFT_C2}`,
+      `${i18n.UL_SOFT_C3}`,
+      `${i18n.UL_SOFT_C4}`
     ],
   },
   {
-    title: "Teamwork",
+    title: `${i18n.TITLE_SOFT_2}`,
     softChaild: [
-      "Conflict resolution ",
-      "Mediation",
-      "Accountability",
-      "Collaboration",
+      `${i18n.UL_SOFT_I1}`,
+      `${i18n.UL_SOFT_I2}`,
+      `${i18n.UL_SOFT_I3}`,
+      `${i18n.UL_SOFT_I4}`,
     ],
   },
   {
-    title: "Problem-solving",
+    title: `${i18n.TITLE_SOFT_3}`,
     softChaild: [
-      "Critical thinking",
-      "Creativity",
-      "Strategic thinking",
-      "Initiative",
+      `${i18n.UL_SOFT_R1}`,
+      `${i18n.UL_SOFT_R2}`,
+      `${i18n.UL_SOFT_R3}`,
+      `${i18n.UL_SOFT_R4}`,
     ],
   },
   {
-    title: "Work ethic",
+    title: `${i18n.TITLE_SOFT_4}`,
     softChaild: [
-      "Time management",
-      "Punctuality",
-      "Organization",
-      "Dedication",
+      `${i18n.UL_SOFT_T1}`,
+      `${i18n.UL_SOFT_T2}`,
+      `${i18n.UL_SOFT_T3}`,
+      `${i18n.UL_SOFT_T4}`,
     ],
   },
   {
-    title: "Adaptability",
+    title: `${i18n.TITLE_SOFT_5}`,
     softChaild: [
-      "Flexibility",
-      "Open-mindedness",
-      "Willingness to learn",
-      "Resilience",
+      `${i18n.UL_SOFT_A1}`,
+      `${i18n.UL_SOFT_A2}`,
+      `${i18n.UL_SOFT_A3}`,
+      `${i18n.UL_SOFT_A4}`,
     ],
   },
   {
-    title: "Leadership",
-    softChaild: ["Delegation", "Motivation", "Inspiration", "Empathy"],
+    title: `${i18n.TITLE_SOFT_6}`,
+    softChaild: [
+      `${i18n.UL_SOFT_L1}`,
+      `${i18n.UL_SOFT_L2}`,
+      `${i18n.UL_SOFT_L3}`,
+      `${i18n.UL_SOFT_L4}`,
+    ],
   },
   {
-    title: "Creativity",
-    softChaild: ["Innovation", "Originality", "Imagination", "Artistic"],
+    title:`${i18n.TITLE_SOFT_7}`,
+    softChaild: [
+      `${i18n.UL_SOFT_CA1}`,
+      `${i18n.UL_SOFT_CA2}`,
+      `${i18n.UL_SOFT_CA3}`,
+      `${i18n.UL_SOFT_CA4}`,
+    ],
   },
   {
-    title: "Interpersonal",
-    softChaild: ["Empathy", "Patience", "Tolerance", "Diplomacy"],
+    title: `${i18n.TITLE_SOFT_8}`,
+    softChaild: [
+      `${i18n.UL_SOFT_I1}`,
+      `${i18n.UL_SOFT_I2}`,
+      `${i18n.UL_SOFT_I3}`,
+      `${i18n.UL_SOFT_I4}`,
+    ],
   },
 ];
 const logos = [
@@ -94,19 +113,20 @@ const logos = [
   { title: "C++", logo: Cplus },
   { title: "Git", logo: Git },
   { title: "Githup", logo: Githup },
-  {title: "Astro", logo: Astrologo}
+  { title: "Astro", logo: Astrologo },
 ];
-const {id}= Astro.props;
+const { id } = Astro.props;
+
 ---
 
 <section id={id}>
   <div class="header">
     <Skillslogo />
-    <h1>Stack & Soft Skills</h1>
+    <h1>{i18n.TITLE_STACK}</h1>
   </div>
   <div>
     <div class="title">
-      <h3>Skill Stack</h3>
+      <h3>{i18n.SUBTITLE_STACK_1}</h3>
       <span>Languages & Frameworks</span>
     </div>
     <div class="grid">
@@ -121,8 +141,8 @@ const {id}= Astro.props;
     </div>
   </div>
   <div class="title">
-    <h3>Soft Skill</h3>
-    <span>attributes & abilities</span>
+    <h3>{i18n.SUTITLE_STACK_2}</h3>
+    <span>{i18n.SPAN_SKILLS_1}</span>
     <div class="grid2">
       {
         softSkills.map((skill) => (
