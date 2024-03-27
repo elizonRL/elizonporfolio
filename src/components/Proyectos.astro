@@ -135,7 +135,7 @@ const proyect = [
   .card {
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     margin-top: 10px;
     margin-bottom: 20px;
   }
@@ -239,11 +239,10 @@ const proyect = [
     margin-inline: 0.5px;
     text-wrap: wrap;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 000px) {
     .card {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
     }
     img {
       width: 100%;
