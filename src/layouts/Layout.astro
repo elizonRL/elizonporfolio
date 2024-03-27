@@ -4,7 +4,7 @@ interface Props {
   description: string;
 }
 
-const { title , description } = Astro.props;
+const { title, description } = Astro.props;
 import Header from "../components/Header.astro";
 import { getLangFromUrl } from "@/i18n/utils";
 const lang = getLangFromUrl(Astro.url);
@@ -40,19 +40,9 @@ const lang = getLangFromUrl(Astro.url);
   }
   html {
     font-family: "Open Sans", sans-serif;
-    background: #0f2027; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #2c5364,
-      #203a43,
-      #0f2027
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #2c5364,
-      #203a43,
-      #0f2027
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #0f2027;
+    background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
   }
   code {
     font-family:
@@ -65,14 +55,16 @@ const lang = getLangFromUrl(Astro.url);
       Courier New,
       monospace;
   }
-  @media screen and (min-width: 800px){
-    html{
+  @media (max-width: 800px) {
+    body {
+      display: grid;
+      place-items: center;
+    }
+    main {
+      background: #0f2027;
+      background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
       background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
     }
-    body{
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+   
   }
 </style>
